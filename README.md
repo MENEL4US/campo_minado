@@ -1,4 +1,4 @@
-# campo_minado
+# Campo Minado
 
 A new Flutter project.
 
