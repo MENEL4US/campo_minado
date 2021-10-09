@@ -6,7 +6,8 @@ class CampoWidget extends StatelessWidget {
   final void Function(Campo) onAbrir;
   final void Function(Campo) onAlternarMarcacao;
 
-  CampoWidget({
+  // ignore: use_key_in_widget_constructors
+  const CampoWidget({
     required this.campo,
     required this.onAbrir,
     required this.onAlternarMarcacao,

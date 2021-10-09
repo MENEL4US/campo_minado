@@ -2,21 +2,23 @@ import 'package:campo_minado/components/tabuleiro_widget.dart';
 import 'package:campo_minado/models/tabuleiro.dart';
 import 'package:flutter/material.dart';
 import '../components/resultado_widget.dart';
-// import '../components/campo_widget.dart';
 import '../models/campo.dart';
 import '../models/explosao_exception.dart';
 
 class CampoMinadoApp extends StatefulWidget {
+  const CampoMinadoApp({Key? key}) : super(key: key);
+
   @override
   State<CampoMinadoApp> createState() => _CampoMinadoAppState();
 }
 
 class _CampoMinadoAppState extends State<CampoMinadoApp> {
   bool? _venceu;
-  Tabuleiro _tabuleiro = Tabuleiro(
-    linhas: 12,
-    colunas: 12,
-    qtdBombas: 3,
+
+  final Tabuleiro _tabuleiro = Tabuleiro(
+    linhas: 21,
+    colunas: 15,
+    qtdBombas: 60,
   );
 
   void _reiniciar() {
@@ -39,7 +41,6 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
           _venceu = true;
         }
       } on ExplosaoException {
-        // print('Exception');
         _venceu = false;
         _tabuleiro.revelarBombas();
       }
@@ -59,6 +60,7 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -66,12 +68,10 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
           venceu: _venceu,
           onReiniciar: _reiniciar,
         ),
-        body: Container(
-          child: TabuleiroWidget(
-            tabuleiro: _tabuleiro,
-            onAbrir: _abrir,
-            onAlternarMarcacao: _alternarMarcacao,
-          ),
+        body: TabuleiroWidget(
+          tabuleiro: _tabuleiro,
+          onAbrir: _abrir,
+          onAlternarMarcacao: _alternarMarcacao,
         ),
       ),
     );

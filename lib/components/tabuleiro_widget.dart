@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+
 import 'package:campo_minado/components/campo_widget.dart';
 import 'package:campo_minado/models/campo.dart';
 import 'package:campo_minado/models/tabuleiro.dart';
@@ -16,17 +18,15 @@ class TabuleiroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: GridView.count(
-        crossAxisCount: tabuleiro.colunas,
-        children: tabuleiro.campos.map((c) {
-          return CampoWidget(
-            campo: c,
-            onAbrir: onAbrir,
-            onAlternarMarcacao: onAlternarMarcacao,
-          );
-        }).toList(),
-      ),
+    return GridView.count(
+      crossAxisCount: tabuleiro.colunas,
+      children: tabuleiro.campos.map((c) {
+        return CampoWidget(
+          campo: c,
+          onAbrir: onAbrir,
+          onAlternarMarcacao: onAlternarMarcacao,
+        );
+      }).toList(),
     );
   }
 }

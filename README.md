@@ -1,6 +1,6 @@
 # Campo Minado
 
-A new Flutter project.
+Meu primeiro App em Flutter :D
 
 ## Getting Started
 

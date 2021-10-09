@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:flutter/foundation.dart';
 import 'campo.dart';
 
 class Tabuleiro {
@@ -21,11 +19,15 @@ class Tabuleiro {
   }
 
   void revelarBombas() {
-    _campos.forEach((c) => c.revelarBomba());
+    for (var c in _campos) {
+      c.revelarBomba();
+    }
   }
 
   void reiniciar() {
-    _campos.forEach((c) => c.reiniciar());
+    for (var c in _campos) {
+      c.reiniciar();
+    }
     _sortearMinas();
   }
 
