@@ -4,7 +4,12 @@ Meu primeiro App em Flutter :D
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Este projeto foi desenvolvido nos meus estudos iniciais do desenvolvimento com Flutter.
+
+## teste
+
+![alt text](https://github.com/MENEL4US/campo_minado/blob/main/assets/images/prints/Inicio.PNG)
+
 
 A few resources to get you started if this is your first Flutter project:
 
