@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'explosao_exception.dart';
 
 class Campo {
@@ -42,7 +42,9 @@ class Campo {
     }
 
     if (vizinhancaSegura) {
-      vizinhos.forEach((v) => v.abrir());
+      for (var v in vizinhos) {
+        v.abrir();
+      }
     }
   }
 

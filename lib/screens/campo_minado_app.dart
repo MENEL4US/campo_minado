@@ -2,7 +2,7 @@ import 'package:campo_minado/components/tabuleiro_widget.dart';
 import 'package:campo_minado/models/tabuleiro.dart';
 import 'package:flutter/material.dart';
 import '../components/resultado_widget.dart';
-import '../components/campo_widget.dart';
+// import '../components/campo_widget.dart';
 import '../models/campo.dart';
 import '../models/explosao_exception.dart';
 
@@ -20,15 +20,43 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
   );
 
   void _reiniciar() {
-    print('_reiniciar...');
+    setState(() {
+      _venceu = null;
+      _tabuleiro.reiniciar();
+    });
   }
 
-  void _abrir(Campo capo) {
-    print('_abrir...');
+  void _abrir(Campo campo) {
+    if (_venceu != null) {
+      return;
+    }
+
+    setState(() {
+      try {
+        campo.abrir();
+
+        if (_tabuleiro.resolvido) {
+          _venceu = true;
+        }
+      } on ExplosaoException {
+        // print('Exception');
+        _venceu = false;
+        _tabuleiro.revelarBombas();
+      }
+    });
   }
 
   void _alternarMarcacao(Campo campo) {
-    print('_alternarMarcacao...');
+    if (_venceu != null) {
+      return;
+    }
+
+    setState(() {
+      campo.alternarMarcacao();
+      if (_tabuleiro.resolvido) {
+        _venceu = true;
+      }
+    });
   }
 
   Widget build(BuildContext context) {
