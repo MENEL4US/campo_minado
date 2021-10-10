@@ -29,7 +29,7 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
   }
 
   void _abrir(Campo campo) {
-    if (_venceu != null) {
+    if (_venceu != null || campo.marcado) {
       return;
     }
 

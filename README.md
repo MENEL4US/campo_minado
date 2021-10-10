@@ -6,16 +6,21 @@ Meu primeiro App em Flutter :D
 
 Este projeto foi desenvolvido nos meus estudos iniciais do desenvolvimento com Flutter.
 
-## teste
+## Tela inicial do jogo
+Grade 15 x 21 com 60 bombas.
 
 ![alt text](https://github.com/MENEL4US/campo_minado/blob/main/assets/images/prints/Inicio.PNG)
 
+## Tela de jogo vencido
+> Depois de váaarias partidas tentando vencer haha'
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](https://github.com/MENEL4US/campo_minado/blob/main/assets/images/prints/Vitoria.PNG)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Tela de jogo perdido
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](https://github.com/MENEL4US/campo_minado/blob/main/assets/images/prints/Derrota.PNG)
+
+Tela ainda com grid fixo, usei o no emulador o Nexus 5 com Android 7. Versão 2.0 adaptável, talvez.
+
+Luiz Mendes     10/10/2021
+Visite meu [Linkedin](https://www.linkedin.com/in/luiz-mendes-dev/) :D
