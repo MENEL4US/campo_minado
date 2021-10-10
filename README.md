@@ -23,4 +23,4 @@ Grade 15 x 21 com 60 bombas.
 Tela ainda com grid fixo, usei o no emulador o Nexus 5 com Android 7. Versão 2.0 adaptável, talvez.
 
 Luiz Mendes     10/10/2021
-Visite meu [Linkedin](https://www.linkedin.com/in/luiz-mendes-dev/) :D
+>Visite meu [Linkedin](https://www.linkedin.com/in/luiz-mendes-dev/) :D
